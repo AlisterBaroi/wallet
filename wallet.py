@@ -8,13 +8,12 @@ st.set_page_config(
 def main():
 
     st.title("Alister's Online Wallet App")
-    uploaded_file = st.file_uploader("Upload a card", type=["jpg", "png"], accept_multiple_files=False)
+    uploaded_file = st.file_uploader(
+        "Upload a card", type=["jpg", "png"], accept_multiple_files=False
+    )
 
-    if uploaded_file not None:
-        st.write(uploaded_file)
-
-
-
+    if uploaded_file is not None:
+        st.image(uploaded_file)
 
 
 if __name__ == "__main__":
